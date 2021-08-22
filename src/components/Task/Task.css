@@ -1,0 +1,35 @@
+.container__item{
+    background: rgb(156, 178, 248);
+    padding: 6px;
+    font-size: 16px;
+    margin: 5px auto;
+    position: relative;
+    width: 92%;
+}
+
+.container__item:hover{
+    background: rgba(156, 178, 248, 0.747);
+  
+}
+
+.container__item__title, .container__item__text{
+    margin: 0;
+}
+
+.container__item__text{
+    font-size: 18px;
+}
+
+.container__item--deleted{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+i{
+    cursor: pointer;
+}
+
+i:hover{
+    transform: scale(1.5,1.5);
+}

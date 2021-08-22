@@ -1,29 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id='app'>
+    <Header />
+    <AddTask />
+    <Tasks />
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import AddTask from './components/AddTask/AddTask.vue';
+import Header from './components/Header/Header.vue';
+import Tasks from './components/Tasks/Tasks.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    AddTask,
+    Header,
+    Tasks,
   },
+  apollo: {},
 })
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang='scss'>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: auto;
+  width: 400px;
+  border: 1px solid black;
 }
 </style>

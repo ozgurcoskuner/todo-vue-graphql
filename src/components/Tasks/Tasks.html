@@ -1,0 +1,6 @@
+<div class="container">
+    <h2>Activities</h2>
+    <div v-for="todo in todos" :key="todo.id">
+        <Task :todo="todo"/>
+    </div>
+</div>

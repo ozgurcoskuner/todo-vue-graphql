@@ -1,0 +1,14 @@
+<div class='container__item'>
+    <h3 class='container__item__title'>
+        <i @click='updateTask' class='far fa-edit container__item--edited'></i>
+        {{todo.description}}
+        </h3> 
+    <i class='far fa-trash-alt container__item--deleted' @click='deleteTask'></i>
+    <div v-if='todo.isDone'>
+        <span>Done: <i @click='uncheckTask' class='fas fa-check container__item--checked' style='color:green'></i></span>
+        
+    </div>
+    <div v-else>
+        <span>Done: <i @click='checkTask' class='fas fa-times container__item--unchecked' style='color:red'></i></span>
+    </div>
+</div>
