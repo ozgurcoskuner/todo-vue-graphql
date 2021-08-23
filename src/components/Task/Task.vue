@@ -56,7 +56,7 @@ export default class Task extends Vue {
           mutation: UPDATE_TASK,
           variables: {
               id: this.todo.id,
-              description: updatedDesc,
+              description: updatedDesc || this.todo.description,
           },
           refetchQueries: ['todos'],
       });
